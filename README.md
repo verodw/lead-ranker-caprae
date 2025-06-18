@@ -12,5 +12,13 @@ The goal is to enhance lead generation capabilities by prioritizing high-impact 
 - **Export & Integration Ready**: Enables CSV/Excel export for seamless integration into sales pipelines or CRM tools.
 - **Basic Reporting**: Provides visuals for score distributions and top-ranked leads, enabling fast decision-making.
 
+## Tech Stack
 
+| Component          | Technology                  |
+|--------------------|------------------------------|
+| Frontend & Backend | Streamlit                    |
+| Machine Learning   | scikit-learn                 |
+| Data Handling      | pandas                       |
+| Data Storage       | CSV                          |
+| Deployment         | Streamlit Cloud              |
 
