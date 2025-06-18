@@ -22,3 +22,11 @@ The goal is to enhance lead generation capabilities by prioritizing high-impact 
 | Data Storage       | CSV                          |
 | Deployment         | Streamlit Cloud              |
 
+## Usage
+
+1. **Upload** your lead data (CSV format) through the dashboard.
+2. The tool will automatically **clean**, **deduplicate**, and **score** each lead.
+3. Use the interactive UI to **adjust scoring criteria** (e.g., industry relevance, company size).
+4. **View and filter** leads by score and other attributes.
+5. **Export** the final scored list as CSV or Excel for your sales workflow.
+
