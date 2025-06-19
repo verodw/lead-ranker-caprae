@@ -413,9 +413,22 @@ if st.session_state.df_scored is not None:
     st.markdown("---")
     st.markdown("### 💾 Export Results")
     
+    # ✅ Tentukan kolom yang ingin dipertahankan
+    columns_to_keep = [
+        'Company', 'Website', 'Industry', 'EmployeeCount',
+        'company_size_score', 'industry_score', 'website_quality_score',
+        'financial_score', 'market_position_score', 'composite_score',
+        'Score', 'scoring_rationale', 'risk_factors',
+        'growth_indicators', 'score_percentile'
+    ]
+
+    # 👇 Pastikan kolom ini ada di DataFrame
+    df_final = st.session_state.df_scored.copy()
+    df_final = df_final[[col for col in columns_to_keep if col in df_final.columns]]
+
     col1, col2 = st.columns(2)
     with col1:
-        csv_data = st.session_state.df_scored.to_csv(index=False)
+        csv_data = df_final.to_csv(index=False)
         st.download_button(
             label="📥 Download Scored Leads CSV",
             data=csv_data,
@@ -426,7 +439,8 @@ if st.session_state.df_scored is not None:
     
     with col2:
         if 'filtered_df' in locals() and len(filtered_df) > 0:
-            filtered_csv = filtered_df.to_csv(index=False)
+            filtered_df_clean = filtered_df[[col for col in columns_to_keep if col in filtered_df.columns]]
+            filtered_csv = filtered_df_clean.to_csv(index=False)
             st.download_button(
                 label="🎯 Download Filtered Results",
                 data=filtered_csv,
