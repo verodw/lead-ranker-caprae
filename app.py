@@ -91,11 +91,11 @@ try:
 except ImportError:
     openai_api_key = None
 
-# Custom CSS dengan favicon tambahan
+# Custom CSS dengan header yang dinaikkan sedikit
 st.markdown("""
 <style>
     .main > div {
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
     
     .metric-card {
@@ -162,6 +162,11 @@ st.markdown("""
     .high-score { border-left-color: #28a745; background-color: #f8fff9; }
     .medium-score { border-left-color: #ffc107; background-color: #fffdf5; }
     .low-score { border-left-color: #dc3545; background-color: #fff5f5; }
+    
+    .header-container {
+        margin-top: -0.5rem;
+        margin-bottom: 0.5rem;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -172,7 +177,7 @@ with col2:
     img_html = img_to_html("lead_ranker.png", width=80)
 
     st.markdown(f"""
-    <div style="text-align: center; padding: 2rem 0;">
+    <div class="header-container" style="text-align: center; padding: 1.5rem 0;">
         {img_html}
         <h1 style="color: #667eea; font-size: 3rem; margin-bottom: 0;">Lead Ranker</h1>
         <h3 style="color: #764ba2; margin-top: 0;">AI-Powered Lead Scoring for Caprae Capital</h3>
@@ -205,9 +210,11 @@ if uploaded_file:
             st.info("Your CSV should have at least a 'Company' column. Optional columns: Industry, Website, EmployeeCount, Revenue")
             st.stop()
         
-        with st.spinner('🔄 Scoring leads with AI...'):
+        with st.spinner('🔄 Scoring leads with AI... This may take a few moments, please wait.'):
             df_scored = score_leads(df, openai_api_key=openai_api_key)
             st.session_state.df_scored = df_scored
+        
+        st.success("✅ Lead scoring completed successfully!")
         
         st.sidebar.markdown("### 🔍 Filter Controls")
         
@@ -418,7 +425,7 @@ if st.session_state.df_scored is not None:
         )
     
     with col2:
-        if len(filtered_df) > 0:
+        if 'filtered_df' in locals() and len(filtered_df) > 0:
             filtered_csv = filtered_df.to_csv(index=False)
             st.download_button(
                 label="🎯 Download Filtered Results",
