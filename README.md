@@ -9,22 +9,23 @@ The goal is to enhance lead generation capabilities by prioritizing high-impact 
 
 ## Features
 
-- **Automated Lead Scoring**: Assigns scores to leads based on historical, behavioral, and demographic data using machine learning techniques.
+- **Automated Lead Scoring**: Assigns scores based on business-aligned rules across company size, industry, financials, website quality and market position.
 - **Data Cleaning & Deduplication**: Ensures input data is clean and free from duplicates to improve scoring accuracy.
 - **Customizable Scoring Criteria**: Allows manual adjustment of scoring weights to suit different business objectives or industries.
 - **Interactive Dashboard**: Built with Streamlit for intuitive data upload, score visualization, and lead exploration.
-- **Export & Integration Ready**: Enables CSV/Excel export for seamless integration into sales pipelines or CRM tools.
+- **Export & Integration Ready**: Enables CSV export for seamless integration into sales pipelines or CRM tools.
 - **Basic Reporting**: Provides visuals for score distributions and top-ranked leads, enabling fast decision-making.
 
 ## Tech Stack
 
-| Component          | Technology                  |
-|--------------------|------------------------------|
-| Frontend & Backend | Streamlit                    |
-| Machine Learning   | scikit-learn                 |
-| Data Handling      | pandas                       |
-| Data Storage       | CSV                          |
-| Deployment         | Streamlit Cloud              |
+| Component          | Technology                                  |
+|--------------------|----------------------------------------------|
+| Frontend & Backend | Streamlit                                    |
+| Scoring Logic      | Rule-based heuristics (Python)               |
+| Future ML Support  | scikit-learn (planned for future extension)  |
+| Data Handling      | pandas                                       |
+| Data Storage       | CSV                                          |
+| Deployment         | Streamlit Cloud                              |
 
 ## Usage
 
