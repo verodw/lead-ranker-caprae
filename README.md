@@ -3,6 +3,8 @@
 This is a lightweight AI-enhanced lead scoring tool built for the Caprae Capital AI-Readiness Challenge.  
 The goal is to enhance lead generation capabilities by prioritizing high-impact leads using an intelligent ranking system.
 
+<img width="1465" alt="Dashboard Preview" src="https://github.com/user-attachments/assets/b5ae4e5f-e869-44e2-a03f-b408d9a6aa16" />
+
 ## Features
 
 - **Automated Lead Scoring**: Assigns scores to leads based on historical, behavioral, and demographic data using machine learning techniques.
