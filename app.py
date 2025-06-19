@@ -108,11 +108,13 @@ st.markdown("""
     }
     
     .stMetric {
-        background-color: #f0f2f6;
-        border: 1px solid #e1e5e9;
+        background-color: #262730;
+        border: 1px solid #444;
         padding: 1rem;
         border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: #FFFFFF;
+        font-family: monospace;
+        box-shadow: 0 2px 4px rgba(255,255,255,0.1);
     }
     
     .upload-section {
