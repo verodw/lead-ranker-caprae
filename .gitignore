@@ -1,0 +1,14 @@
+.env
+*.env
+.env.*
+.envrc
+
+__pycache__/
+*.py[cod]
+*.pyo
+
+.vscode/
+.DS_Store
+*.log
+.streamlit/config.toml
+.streamlit/secrets.toml
