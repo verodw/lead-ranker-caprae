@@ -34,3 +34,12 @@ The goal is to enhance lead generation capabilities by prioritizing high-impact 
 4. **View and filter** leads by score and other attributes.
 5. **Export** the final scored list as CSV or Excel for your sales workflow.
 
+## 📂 Sample Dataset
+
+Test the app using sample organization datasets:
+
+- [organizations-100.csv](https://github.com/verodw/lead-ranker-caprae/blob/deploy-veronica/sample_data/organizations-100.csv)
+- [organizations-1000.csv](https://github.com/verodw/lead-ranker-caprae/blob/deploy-veronica/sample_data/organizations-1000.csv)
+- [organizations-10000.csv](https://github.com/verodw/lead-ranker-caprae/blob/deploy-veronica/sample_data/organizations-10000.csv)
+
+📎 Source: [Datablist – Download Sample CSV Files](https://www.datablist.com/learn/csv/download-sample-csv-files)
